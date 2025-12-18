@@ -1,7 +1,10 @@
-import styles from '~styles/app.module.scss';
 import { createBrowserRouter } from "react-router";
-import { Home } from './Home';
 import { Layout } from '~/components';
+import { Home } from './Home';
+import { About } from './About';
+import { Contact } from './Contact';
+import { Projects } from './Projects';
+import styles from '~styles/app.module.scss';
 
 export const router = createBrowserRouter(
     [
@@ -13,10 +16,18 @@ export const router = createBrowserRouter(
                     index: true,
                     element: <Home />
                 },
-                // {
-                //     path: "name",
-                //     element: <module-name />
-                // },
+                {
+                    path: "projects",
+                    element: <Projects />
+                },
+                {
+                    path: "about",
+                    element: <About />
+                },
+                {
+                    path: "contact",
+                    element: <Contact />
+                },
                 {
                     path: "*",
                     element: (

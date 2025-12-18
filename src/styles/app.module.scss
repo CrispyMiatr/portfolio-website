@@ -1,4 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+
+$font-geo: 'Geologica', sans-serif;
+$font-mono: 'DM Mono', monospace;
+$weight-light: 300;
+$weight-regular: 400;
+$weight-medium: 500;
 
 /* ----- Error Page  ----- */
 .error {
@@ -17,7 +24,7 @@
         font-size: 30px;
         font-weight: 600;
         color: red;
-        font-family: 'Geologica', sans-serif;
+        font-family: $font-geo;
     }
 }
 
@@ -29,8 +36,12 @@
     grid-template-rows: repeat(2, auto);
     grid-column-gap: 20px;
 
-    padding: 10px 10px 20px 10px;
-    margin: 0px 60px;
+    padding: 0px 60px;
+
+    align-items: center;
+
+    color: #fff;
+    background-color: #000;
 
     &__logo {
         cursor: pointer;
@@ -47,11 +58,40 @@
         grid-row: 1/2;
 
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
         grid-template-rows: auto;
 
         justify-content: left;
-        align-content: center;
+
+        &>*:first-child {
+            border-top-left-radius: 4px;
+
+        }
+
+        &>*:last-child {
+            border-top-right-radius: 4px;
+        }
+    }
+
+    &__extra {
+        grid-column: 12/13;
+        grid-row: 1/2;
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        grid-column-gap: 10px;
+
+        align-items: center;
+
+        &__time {
+            font-family: $font-mono;
+            font-size: 14px;
+        }
+
+        &__icon {
+            align-self: center;
+        }
     }
 }
 
@@ -64,21 +104,43 @@
 
 
 /* ----- Page Elements  ----- */
-.button {
+.nav-button {
     cursor: pointer;
 
+    color: #fff;
     text-decoration: none;
-    color: #000;
-    font-family: 'Geologica', sans-serif;
+    font-family: $font-mono;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
 
-    &:hover,
-    &--active {
-        color: #868686;
+    border: 1px solid #fff;
+    border-bottom: none;
+    background-color: #000;
+
+    justify-self: center;
+
+    margin-top: 5px;
+    padding: 11px 0px;
+    width: 123px;
+
+    transition: all 0.1s ease-in-out;
+
+    &:hover {
+        color: #000;
+        font-weight: 500;
+        background-color: #fff;
+        background-image: linear-gradient(to bottom, #ffdda6, #fff, #fff);
+
+        translate: 0px 2px;
     }
 
-    &__title {
-        font-size: 20px;
-        font-weight: 400;
-        text-align: center;
+    &--active {
+        color: #000;
+        font-weight: 500;
+        background-color: #fff;
+        background-image: linear-gradient(to bottom, #ffdda6, #ffdda6, #fff);
+
+        translate: 0px 2px;
     }
 }
