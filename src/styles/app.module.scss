@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=swap');
+
+/* ----- Error Page  ----- */
+.error {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100vh;
+
+    &__h1 {
+        padding: 15px;
+        border: black solid 1px;
+        border-radius: 20px;
+
+        font-size: 30px;
+        font-weight: 600;
+        color: red;
+        font-family: 'Geologica', sans-serif;
+    }
+}
+
+
+/* ----- Header  ----- */
+.navbar {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-column-gap: 20px;
+
+    padding: 10px 10px 20px 10px;
+    margin: 0px 60px;
+
+    &__logo {
+        cursor: pointer;
+
+        grid-column: 1/2;
+        grid-row: 1/2;
+        justify-content: left;
+
+        width: 50px;
+    }
+
+    &__nav-buttons {
+        grid-column: 2/5;
+        grid-row: 1/2;
+
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+
+        justify-content: left;
+        align-content: center;
+    }
+}
+
+
+/* ----- Footer  ----- */
+.footer {
+    grid-column: 1/13;
+    grid-row: 8/9;
+}
+
+
+/* ----- Page Elements  ----- */
+.button {
+    cursor: pointer;
+
+    text-decoration: none;
+    color: #000;
+    font-family: 'Geologica', sans-serif;
+
+    &:hover,
+    &--active {
+        color: #868686;
+    }
+
+    &__title {
+        font-size: 20px;
+        font-weight: 400;
+        text-align: center;
+    }
+}
