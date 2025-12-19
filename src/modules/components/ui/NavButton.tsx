@@ -5,7 +5,7 @@ import styles from '~styles/app.module.scss';
 export const NavButton = ({ name, link }: NavButtonType) => {
 
     return (
-        <NavLink to={link} className={({ isActive }) => isActive ? `${styles['nav-button']} ${styles['nav-button--active']}` : styles['nav-button']}>
+        <NavLink to={link} className={({ isActive }) => isActive ? `${styles['nav-btn']} ${styles['nav-btn--active']}` : styles['nav-btn']}>
             {name}
         </NavLink>
     );
