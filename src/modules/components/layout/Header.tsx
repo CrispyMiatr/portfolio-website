@@ -1,7 +1,7 @@
 import { Link } from 'react-router';
-import styles from '~styles/app.module.scss';
 import { useState, useEffect } from 'react';
-import { NavButton } from '../ui';
+import { Icons, NavButton } from '../ui';
+import styles from '~styles/app.module.scss';
 
 export const Header = () => {
     const [time, setTime] = useState(new Date());
@@ -34,9 +34,10 @@ export const Header = () => {
                     <p>{currentTime}</p>
                 </div>
 
-                <img className={styles['navbar__extra__icon']} src='./src/assets/globe.svg' alt="" />
-
+                <div className={styles['navbar__extra__icon']}>
+                    <Icons.Globe />
+                </div>
             </div>
         </nav>
     );
-}
+};
