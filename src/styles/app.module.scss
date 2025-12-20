@@ -7,6 +7,33 @@ $weight-light: 300;
 $weight-regular: 400;
 $weight-medium: 500;
 
+$margin: 60px;
+
+h1 {
+    color: #000;
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.title-wrap {
+    width: 100vw;
+    margin-left: -$margin;
+    margin-top: 40px;
+
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+
+    &__title {
+        // background-color: var(--title-bg, #fff);
+        background-image: linear-gradient(to right, var(--title-bg) 0%, var(--title-bg) 50%, #fff 100%);
+
+        padding: 8px 150px 8px 10px;
+        margin-left: $margin;
+        width: fit-content;
+    }
+}
+
+
 /* ----- Error Page  ----- */
 .error {
     display: flex;
