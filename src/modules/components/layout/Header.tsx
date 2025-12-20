@@ -22,7 +22,7 @@ export const Header = () => {
                 <img src={'./src/assets/logo.svg'} alt="Logo" className={styles['navbar__logo']} />
             </Link>
 
-            <div className={styles['navbar__nav-buttons']}>
+            <div className={styles['navbar__nav-btns']}>
                 <NavButton name="Home" link="/" />
                 <NavButton name="Projects" link="/projects" />
                 <NavButton name="About" link="/about" />

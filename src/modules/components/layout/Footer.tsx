@@ -10,7 +10,7 @@ export const Footer = () => {
                 <img src={'./src/assets/logo.svg'} alt="Logo" className={styles['footer__logo']} />
             </Link>
 
-            <div className={styles['footer__nav-buttons']}>
+            <div className={styles['footer__nav-btns']}>
                 <NavButton name="Home" link="/" />
                 <NavButton name="Projects" link="/projects" />
                 <NavButton name="About" link="/about" />
